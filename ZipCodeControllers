@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Controllers;
+
+class ZipCode extends BaseController
+{
+    public function zcode($zip)
+    {
+        $location = array 
+        (   
+            '01030' => 'Álvaro Obregón',
+            '01120' => 'Miguel Hidalgo',
+            '01150' => 'Mexico City',
+            '02000' => 'Azcapotzalco',
+            '02010' => 'Cuauhtémoc'
+        );
+
+        if (isset($location[$zip])){
+            $town = $location[$zip];
+        }
+
+        echo $town;
+    }
+}
